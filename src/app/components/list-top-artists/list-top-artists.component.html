@@ -1,0 +1,5 @@
+<h3 class="titles-md">Top 5 Artistas</h3>
+
+<app-img-name-artist *ngFor="let artist of artists" [imgSrc]="artist.imageUrl">
+  {{ artist.name }}
+</app-img-name-artist>

@@ -1,0 +1,42 @@
+@import "variables";
+
+@media only screen and (max-width: 1250px) {
+  .hide-column {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  :host {
+    .hide-column {
+      display: none;
+    }
+
+    .titles-bg {
+      font-size: 1.4rem;
+    }
+
+    .my-musics {
+      padding: 0px 20px;
+    }
+
+    .list-musics {
+      padding: 0px 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .hide-column {
+    display: none;
+  }
+
+  .my-musics {
+    height: 20vh;
+  }
+
+  .list-musics {
+    height: 80vh;
+    margin: 5px 0px;
+  }
+}

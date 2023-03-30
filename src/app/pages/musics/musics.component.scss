@@ -1,0 +1,42 @@
+@import "variables";
+@import "../home/home.component.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-backgroundHome;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .table {
+    @extend .table;
+  }
+
+  .list {
+    height: 25vh;
+    max-height: 25vh;
+    padding: 20px 50px 0px 50px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+
+    &-thumb {
+      background-color: rgba($color-primary, 0.15);
+      border-radius: 50px;
+    }
+
+    &-track {
+      background-color: transparent;
+    }
+  }
+
+  .list-musics {
+    height: 65vh;
+    width: 100%;
+    padding: 0px 50px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+  }
+}

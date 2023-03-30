@@ -1,0 +1,87 @@
+@import "variables";
+
+:host {
+  .searchs {
+    display: flex;
+    margin-bottom: 20px;
+    color: $color-secondary;
+
+    input {
+      width: 100%;
+      padding: 10px 33px 10px 15px;
+      outline: none;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: $color-primary;
+      background-color: $color-backgroundItems;
+      box-shadow: 5px 2px 10px rgba(12, 12, 12, 0.514);
+      transition: border-color 0.5s ease;
+      transition: background-color 0.8s ease;
+      position: relative;
+
+      &::placeholder {
+        color: $color-tertiary;
+        font-size: 0.85rem;
+      }
+
+      &:hover {
+        border-color: $color-subtitle;
+        transition: border-color 0.8s ease;
+      }
+
+      &:focus,
+      &:active {
+        border-color: $color-primary;
+        background-color: $color-backgroundUser;
+      }
+    }
+
+    span {
+      padding: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $color-primary;
+      cursor: pointer;
+    }
+
+    .icon {
+      position: absolute;
+      right: 25px;
+      top: 60px;
+      transform: translateY(-50%);
+
+      &:hover {
+        color: $color-subtitle;
+      }
+    }
+  }
+
+  .sugestions {
+    flex-wrap: wrap;
+
+    span {
+      padding: 7px 10px;
+      margin-right: 8px;
+      margin-top: 10px;
+      border: 1px solid transparent;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: $color-secondary;
+      background-color: $color-backgroundItems;
+      box-shadow: 5px 2px 10px rgba(12, 12, 12, 0.514);
+      transition: border-color 0.3s ease;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-subtitle;
+        background-color: $color-backgroundUser;
+        border-color: $color-primary;
+        transition: border-color 0.8s ease;
+        transition: background-color 0.8s ease;
+      }
+    }
+  }
+}

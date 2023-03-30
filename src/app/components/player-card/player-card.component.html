@@ -1,0 +1,15 @@
+<div class="container">
+  <img class="image" [src]="music.album.imageUrl" alt="">
+  <span class="mt-2">
+    {{ music.title }}
+  </span>
+
+  <div class="controls mt-1">
+    <div class="buttons">
+      <fa-icon [icon]="prevIcon" (click)="backMusic()"></fa-icon>
+      <fa-icon class="play" [icon]="playIcon"></fa-icon>
+      <fa-icon [icon]="nextIcon" (click)="nextMusic()"></fa-icon>
+    </div>
+  </div>
+
+</div>

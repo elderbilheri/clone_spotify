@@ -1,0 +1,115 @@
+@import "variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-backgroundHome;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .table {
+    width: 100%;
+    color: $color-secondary;
+    text-align: left;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    .playing {
+      background-color: rgba($color-primary, 0.15);
+      color: $color-titles;
+      box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.25);
+    }
+
+    .play {
+      color: $color-primary;
+      font-size: 0.65rem;
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-background;
+      }
+    }
+
+    thead th {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $color-subtitle;
+      border-bottom: 1px solid #4e4e4ec7;
+      padding-bottom: 5px;
+
+      &:nth-child(1) {
+        padding-left: 10px;
+        padding-right: 5px;
+      }
+    }
+
+    th,
+    td {
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    tr {
+      &:hover {
+        color: $color-primary;
+        background-color: $color-backgroundHover;
+        cursor: pointer;
+      }
+    }
+
+    td {
+      padding: 10px 20px 10px 0px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 5px;
+
+      &:nth-child(1) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    .time {
+      text-align: right;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+
+    &-thumb {
+      background-color: rgba($color-primary, 0.15);
+      border-radius: 50px;
+    }
+
+    &-track {
+      background-color: transparent;
+    }
+  }
+
+  .my-musics {
+    grid-row: 1;
+    height: 30vh;
+    width: 100%;
+    padding: 0px 50px;
+  }
+
+  .list-musics {
+    height: 60vh;
+    width: 100%;
+    grid-row: 2;
+    padding: 0px 50px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+  }
+
+  .d-block {
+    display: block;
+  }
+}

@@ -1,0 +1,40 @@
+@import "variables";
+
+:host {
+  display: block;
+  width: 100%;
+
+  button {
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $color-primary;
+    background-color: transparent;
+    cursor: pointer;
+    overflow-x: hidden;
+    white-space: nowrap;
+
+    span {
+      display: inline-block;
+      vertical-align: sub;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      overflow-x: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    &.selected {
+      color: #000;
+      background-color: $color-primary;
+    }
+  }
+}
