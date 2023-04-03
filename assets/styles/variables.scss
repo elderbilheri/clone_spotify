@@ -1,0 +1,20 @@
+// --> Colors
+$color-primary: #fbec5d;
+$color-secondary: #fcfcfc;
+$color-tertiary: #929292;
+$color-titles: #ffd700;
+$color-subtitle: #ff5e14;
+$color-background: #222;
+$color-backgroundLeft: #202123;
+$color-backgroundUser: #252525;
+$color-backgroundHome: #282933;
+$color-backgroundItems: #7272725d;
+$color-backgroundHover: #6868681f;
+
+// --> Sizes
+$spotify-logo: 120px;
+$menu-options: 150px;
+$menu-spacing: 10px;
+$footer-user: 80px;
+
+$sizePlaylist: calc($spotify-logo + $menu-options + $footer-user);
