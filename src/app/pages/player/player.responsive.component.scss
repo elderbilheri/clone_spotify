@@ -1,0 +1,26 @@
+@import "variables";
+
+@media only screen and (max-width: 450px) {
+  :host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .siderbarLeft {
+      height: 45vh;
+      min-height: 45vh;
+    }
+
+    .routes-container {
+      height: 40vh;
+      max-height: 40vh;
+    }
+
+    .siderbarRight {
+      height: 15vh;
+      max-height: 15vh;
+    }
+  }
+}

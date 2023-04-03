@@ -4,20 +4,20 @@
   </div>
 
   <div class="menu-container flex options">
-    <app-button-menu [description]="'Home'" [selected]="menuSelected == 'Home'" (click)="buttonClick('Home')">
+    <app-button-menu class="button" [description]="'Home'" [selected]="menuSelected == 'Home'" (click)="buttonClick('Home')">
       <fa-icon [icon]="homeIcon"></fa-icon>
     </app-button-menu>
 
-    <app-button-menu [description]="'Pesquisar'" [selected]="menuSelected == 'Pesquisar'" (click)="buttonClick('Pesquisar')">
+    <app-button-menu class="button" [description]="'Pesquisar'" [selected]="menuSelected == 'Pesquisar'" (click)="buttonClick('Pesquisar')">
       <fa-icon [icon]="searchIcon"></fa-icon>
     </app-button-menu>
 
-    <app-button-menu [description]="'Artistas'" [selected]="menuSelected == 'Artistas'" (click)="buttonClick('Artistas')">
+    <app-button-menu class="button" [description]="'Artistas'" [selected]="menuSelected == 'Artistas'" (click)="buttonClick('Artistas')">
       <fa-icon [icon]="artistIcon"></fa-icon>
     </app-button-menu>
   </div>
 
-  <div class="menu-container flex">
+  <div class="menu-container flex playlist">
     <span class="playlist-titulo">
       PLAYLISTS
     </span>

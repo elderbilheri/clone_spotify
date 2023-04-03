@@ -9,3 +9,74 @@
     }
   }
 }
+
+@media only screen and (max-width: 450px) {
+  :host {
+    width: auto;
+    max-width: initial;
+    min-width: 350px;
+
+    .image-container {
+      align-self: center;
+      width: 200px;
+    }
+
+    .menus {
+      flex-grow: initial;
+      height: auto;
+
+      .menu-container {
+        width: auto;
+        margin-bottom: 25px;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        max-height: initial;
+
+        &.flex {
+          display: flex;
+          flex-direction: initial;
+        }
+
+        &.options {
+          min-height: initial;
+          gap: 5px;
+
+          * {
+            align-items: center;
+            justify-self: center;
+            margin-bottom: initial;
+          }
+        }
+
+        &.playlist {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            margin-bottom: 20px;
+          }
+        }
+
+        .playlist-scroll {
+          display: grid;
+          max-height: 120px;
+          grid-template-columns: repeat(2, auto);
+          overflow: scroll;
+          text-overflow: ellipsis;
+          gap: 5px;
+
+          * {
+            background-color: $color-backgroundHover;
+            overflow-x: hidden;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .user-info {
+      display: none;
+    }
+  }
+}

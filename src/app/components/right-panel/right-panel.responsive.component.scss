@@ -1,0 +1,33 @@
+@import "variables";
+
+// responsivo
+@media only screen and (max-width: 820px) {
+  :host {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  :host {
+    display: flex;
+    flex-direction: initial;
+    width: auto;
+    max-width: initial;
+    height: 20vh;
+    max-height: 20vh;
+    padding: 10px;
+
+    .search,
+    .top-artist {
+      display: none;
+    }
+
+    .player {
+      height: 15vh;
+      max-height: 15vh;
+      padding: 0px;
+      margin-top: initial;
+      overflow-y: scroll;
+    }
+  }
+}

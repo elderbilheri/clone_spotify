@@ -1,7 +1,7 @@
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { PlayerService } from './../../services/player.service';
 import { SpotifyService } from './../../services/spotify.service';
 import { Subscription } from 'rxjs';
-import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IMusic } from './../../interfaces/IMusic';
 import { newMusic } from 'src/app/common/factories';
@@ -10,7 +10,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-musics',
   templateUrl: './musics.component.html',
-  styleUrls: ['./musics.component.scss'],
+  styleUrls: ['./musics.component.scss', './musics.responsive.component.scss'],
 })
 export class MusicsComponent implements OnInit, OnDestroy {
   bannerImageUrl = '';
@@ -25,6 +25,10 @@ export class MusicsComponent implements OnInit, OnDestroy {
 
   //Icones
   playIcon = faPlay;
+
+  // Responsive
+  isMediumScreen = false;
+  isSmallScreen = false;
 
   constructor(
     private spotifyService: SpotifyService,
@@ -94,6 +98,21 @@ export class MusicsComponent implements OnInit, OnDestroy {
       this.currentMusic = music;
     });
     this.subs.push(sub);
+  }
+
+  // Método para deixar a tabela responsiva
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMediumScreen = event.target.innerWidth <= 1250;
+    this.isSmallScreen = event.target.innerWidth <= 1150;
+  }
+
+  isScreenMedium() {
+    return this.isMediumScreen;
+  }
+
+  isScreenSmall() {
+    return this.isSmallScreen;
   }
 
   ngOnDestroy(): void {

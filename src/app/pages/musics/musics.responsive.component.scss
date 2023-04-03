@@ -20,6 +20,10 @@
       padding: 0px 20px;
     }
 
+    .list {
+      padding: 20px 20px 0px 20px;
+    }
+
     .list-musics {
       padding: 0px 20px;
     }
@@ -27,13 +31,19 @@
 }
 
 @media only screen and (max-width: 970px) {
-  .hide-column {
-    display: none;
-  }
+  :host {
+    .hide-column {
+      display: none;
+    }
 
-  .list-musics {
-    height: 80vh;
-    margin: 5px 0px;
+    .my-musics {
+      height: 20vh;
+    }
+
+    .list-musics {
+      height: 80vh;
+      margin: 5px 0px;
+    }
   }
 }
 
@@ -42,7 +52,11 @@
     background-color: $color-backgroundLeft;
     width: auto;
 
-    .my-musics {
+    .list {
+      display: none;
+    }
+
+    .hide {
       display: none;
     }
 

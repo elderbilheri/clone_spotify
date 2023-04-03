@@ -12,7 +12,10 @@ import {
 @Component({
   selector: 'app-player-card',
   templateUrl: './player-card.component.html',
-  styleUrls: ['./player-card.component.scss'],
+  styleUrls: [
+    './player-card.component.scss',
+    './player-card.responsive.component.scss',
+  ],
 })
 export class PlayerCardComponent implements OnInit, OnDestroy {
   music: IMusic = newMusic();

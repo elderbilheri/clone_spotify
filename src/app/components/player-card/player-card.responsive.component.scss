@@ -1,0 +1,32 @@
+@import "variables";
+
+@media only screen and (max-width: 450px) {
+  :host {
+    .container {
+      display: flex;
+      flex-direction: initial;
+      width: auto;
+      max-width: initial;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      gap: 5px;
+
+      .image {
+        width: 70px;
+      }
+
+      span {
+        white-space: initial;
+      }
+
+      .controls {
+        flex-grow: initial;
+
+        .buttons {
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
